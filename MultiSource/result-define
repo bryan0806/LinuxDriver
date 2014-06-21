@@ -1,0 +1,5 @@
+
+t@debian60:~/driver/MultiSource# insmod startstop.ko
+[13742.996013] Hello
+[13742.996122] define __TEST__
+
