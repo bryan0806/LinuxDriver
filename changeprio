@@ -1,0 +1,9 @@
+
+t@debian60:~/driver/MultiSource# cat /proc/sys/kernel/printk
+4       4       1       7
+
+root@debian60:~/driver/MultiSource# echo 7 > /proc/sys/kernel/printk
+root@debian60:~/driver/MultiSource# cat /proc/sys/kernel/printk
+7       4       1       7
+
+
