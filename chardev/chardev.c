@@ -122,6 +122,8 @@ static ssize_t device_read(struct file *filp, char *buffer, size_t length, loff_
         length--;
         bytes_read++;
     }
+    msg_Ptr=Message;	
+    printk("<1>device_read:the Message now is %s\n",msg_Ptr);
 
     // Most read functions return the number of bytes put into the buffer
     return bytes_read;
@@ -129,7 +131,18 @@ static ssize_t device_read(struct file *filp, char *buffer, size_t length, loff_
 /* Called when a process writes to dev file: echo "hi" > /dev/hello */
 static ssize_t device_write(struct file *filp, const char *buff, size_t len, loff_t *off)
 {
-    printk ("<1>Sorry, this operation isn't supported.\n");
-    return -EINVAL;
+    int bytes_write = 0;
+    if(len==0)
+	return 0;
+    while(len){
+	get_user(*(msg_Ptr++),buff++);
+	len--;
+	bytes_write++;
+    }
+    get_user(*(msg_Ptr++),buff++);// 為了後面的部分為空值
+    msg_Ptr=Message; // 讓指標從新指向開頭
+    printk("<1>device_write:the Message now is %s\n",msg_Ptr);
+    return bytes_write;
+
 }
 MODULE_LICENSE("GPL");
