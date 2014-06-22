@@ -1,0 +1,1 @@
+cmd_/mnt/hgfs/embedded/linuxdriver/hw01/hw1-1.o := ld -m elf_i386 -m elf_i386  -r -o /mnt/hgfs/embedded/linuxdriver/hw01/hw1-1.o /mnt/hgfs/embedded/linuxdriver/hw01/start.o /mnt/hgfs/embedded/linuxdriver/hw01/stop.o

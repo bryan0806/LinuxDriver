@@ -1,0 +1,14 @@
+
+t@debian60:~/driver/Parameter# insmod startstop.ko
+[18340.349686] Hello
+[18340.349889] define __TEST__
+[18340.350100] my defined long mylong is 9999
+[18340.350335] my defined string is blah
+root@debian60:~/driver/Parameter# rmmod startstop
+[18356.099847] bye
+root@debian60:~/driver/Parameter# insmod startstop.ko mystring="yeah..." mylong=7777
+[18374.971320] Hello
+[18374.971599] define __TEST__
+[18374.971881] my defined long mylong is 7777
+[18374.972210] my defined string is yeah...
+

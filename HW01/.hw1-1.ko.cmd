@@ -1,0 +1,1 @@
+cmd_/mnt/hgfs/embedded/linuxdriver/hw01/hw1-1.ko := ld -m elf_i386 -r -m elf_i386  --build-id -o /mnt/hgfs/embedded/linuxdriver/hw01/hw1-1.ko /mnt/hgfs/embedded/linuxdriver/hw01/hw1-1.o /mnt/hgfs/embedded/linuxdriver/hw01/hw1-1.mod.o

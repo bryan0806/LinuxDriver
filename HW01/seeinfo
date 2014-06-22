@@ -1,0 +1,2 @@
+可以使用
+modinfo ./startstop.ko 來看到這個模組的參數 以及其他資訊
