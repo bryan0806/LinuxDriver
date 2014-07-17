@@ -1,0 +1,10 @@
+#!/bin/sh
+
+module="chardev"
+device="chardev"
+
+/sbin/rmmod $module || exit 1
+
+#remove stale nodes
+
+rm -f /dev/${device}
